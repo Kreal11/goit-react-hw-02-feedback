@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledBtn = styled.button`
   cursor: pointer;
-  padding: 5px;
+  padding: 10px;
   background-color: ${props => {
     if (props.color === 'good') {
       return 'green';
