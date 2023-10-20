@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { StyledMainWrapper } from './Statistics/FeedbackStat.styled';
+import { StyledMainWrapper } from './Statistics/Statistics.styled';
 import { Statistics } from './Statistics/Statistics';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Section } from './Section/Section';
@@ -32,7 +32,6 @@ export class App extends Component {
     const totalFeedback = this.countTotalFeedback();
     const totalPositiveFeedbacks =
       this.countPositiveFeedbackPercentage().toFixed();
-
     return (
       <StyledMainWrapper>
         <Section title="PLEASE, LEAVE YOUR FEEDBACK">

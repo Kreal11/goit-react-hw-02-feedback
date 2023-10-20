@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { StyledSectionTitle } from './Section.styled';
 
 export class Section extends Component {
   render() {
@@ -6,7 +7,7 @@ export class Section extends Component {
 
     return (
       <div>
-        <h2>{title}</h2>
+        <StyledSectionTitle>{title}</StyledSectionTitle>
         {children}
       </div>
     );
