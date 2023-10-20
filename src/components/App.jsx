@@ -1,5 +1,6 @@
 import { Component } from 'react';
-import { StyledMainWrapper } from './FeedbackStat/StyledFeedbackStat.styled';
+import { StyledMainWrapper } from './Statistics/FeedbackStat.styled';
+import { Statistics } from './Statistics/Statistics';
 
 export class App extends Component {
   state = {
@@ -43,13 +44,13 @@ export class App extends Component {
           Bad
         </button>
         <h2>Statistics</h2>
-        <ul>
-          <li>Good: {this.state.good}</li>
-          <li>Neutral: {this.state.neutral}</li>
-          <li>Bad: {this.state.bad}</li>
-        </ul>
-        <p>Total: {totalFeedback}</p>
-        <p>Positive feedbacks: {totalPositiveFeedbacks}%</p>
+        <Statistics
+          good={this.state.good}
+          neutral={this.state.neutral}
+          bad={this.state.bad}
+          total={totalFeedback}
+          positivePercentage={totalPositiveFeedbacks}
+        ></Statistics>
       </StyledMainWrapper>
     );
   }
