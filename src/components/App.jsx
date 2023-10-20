@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { StyledMainWrapper } from './Statistics/FeedbackStat.styled';
 import { Statistics } from './Statistics/Statistics';
+import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 
 export class App extends Component {
   state = {
@@ -34,15 +35,10 @@ export class App extends Component {
     return (
       <StyledMainWrapper>
         <h1>PLEASE LEAVE FEEDBACK</h1>
-        <button type="button" onClick={() => this.handleChangeStat('good')}>
-          Good
-        </button>
-        <button type="button" onClick={() => this.handleChangeStat('neutral')}>
-          Neutral
-        </button>
-        <button type="button" onClick={() => this.handleChangeStat('bad')}>
-          Bad
-        </button>
+        <FeedbackOptions
+          options={Object.keys(this.state)}
+          onLeaveFeedback={this.handleChangeStat}
+        ></FeedbackOptions>
         <h2>Statistics</h2>
         <Statistics
           good={this.state.good}
