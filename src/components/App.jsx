@@ -3,6 +3,7 @@ import { StyledMainWrapper } from './Statistics/Statistics.styled';
 import { Statistics } from './Statistics/Statistics';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Section } from './Section/Section';
+import { PropTypes } from 'prop-types';
 
 export class App extends Component {
   state = {
@@ -53,3 +54,9 @@ export class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
+};
