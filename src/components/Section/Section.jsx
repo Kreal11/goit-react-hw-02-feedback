@@ -24,11 +24,9 @@ Section.propTypes = {
       bad: PropTypes.number,
       total: PropTypes.number,
       positivePercentage: PropTypes.string,
-    }).isRequired,
-    props: PropTypes.shape({
       options: PropTypes.arrayOf(PropTypes.string.isRequired),
       onLeaveFeedback: PropTypes.func,
-    }),
+    }).isRequired,
   }).isRequired,
   // children: PropTypes.node.isRequired,
 };
