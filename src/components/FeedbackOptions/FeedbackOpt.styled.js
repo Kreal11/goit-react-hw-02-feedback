@@ -4,12 +4,13 @@ export const StyledBtn = styled.button`
   cursor: pointer;
   padding: 10px;
   background-color: ${props => {
-    if (props.color === 'good') {
-      return 'green';
-    } else if (props.color === 'neutral') {
-      return 'orange';
-    } else {
-      return 'red';
+    switch (props.color) {
+      case 'good':
+        return 'green';
+      case 'neutral':
+        return 'orange';
+      default:
+        return 'red';
     }
   }};
   border-radius: 5px;
