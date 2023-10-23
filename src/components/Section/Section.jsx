@@ -17,16 +17,5 @@ export class Section extends Component {
 
 Section.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.shape({
-    props: PropTypes.shape({
-      good: PropTypes.number,
-      neutral: PropTypes.number,
-      bad: PropTypes.number,
-      total: PropTypes.number,
-      positivePercentage: PropTypes.string,
-      options: PropTypes.arrayOf(PropTypes.string.isRequired),
-      onLeaveFeedback: PropTypes.func,
-    }).isRequired,
-  }).isRequired,
-  // children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 };
